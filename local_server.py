@@ -26,6 +26,8 @@ def message_received(client, server, message):
     server.send_message(client, reply_message)
     logger.info('Message "{}" has been sent to {}:{}'.format(reply_message, client['address'][0], client['address'][1]))
 
+    
+
 
 if __name__ == "__main__":
     server = WebsocketServer(port=WSPORT, host=IP, loglevel=logging.INFO)
