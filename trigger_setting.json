@@ -1,0 +1,10 @@
+{
+    "WorldName" : "OSCTestWorld",
+    "OSCButtonTrigers": [
+        {
+            "address": "/cube/activate",
+            "OnTrigerKey": "キューブ アクティブ",
+            "OffTriggerKey": "キューブ オフ"
+        }
+    ]
+}
