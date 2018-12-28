@@ -3,6 +3,9 @@
 import logging
 from websocket_server import WebsocketServer
 
+import trigger_selector
+import osc_sender
+
 IP = '127.0.0.1'
 WSPORT = 12345
 
@@ -26,7 +29,12 @@ def message_received(client, server, message):
     server.send_message(client, reply_message)
     logger.info('Message "{}" has been sent to {}:{}'.format(reply_message, client['address'][0], client['address'][1]))
 
-    
+    # トリガーメッセージと入力がマッチしていればVRCへOSCメッセージを送信
+    value = trigger_selector.select(message)
+    if not value is -1:
+        logger.info('Triger selected! Value is {}.'.format(str(value)))
+        osc_msg = osc_sender.send(value)
+        logger.info('OSC Message "{}" has been sent to VRChat client'.format(osc_msg))
 
 
 if __name__ == "__main__":

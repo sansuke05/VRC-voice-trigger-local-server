@@ -8,6 +8,7 @@ verify_ssl = true
 [packages]
 websocket-server = {git = "https://github.com/Pithikos/python-websocket-server"}
 websocket-client = "*"
+python-osc = "*"
 
 [requires]
 python_version = "3.6"

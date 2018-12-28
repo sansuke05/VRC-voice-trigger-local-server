@@ -26,7 +26,7 @@ def select(input_text):
     return -1
 
 
-# テスト用
+# 単体テスト用
 if __name__ == "__main__":
     texts = [
         'キューブ アクティブ',
