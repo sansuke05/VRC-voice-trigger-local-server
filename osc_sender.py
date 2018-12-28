@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 
+from time import sleep
 from pythonosc import udp_client
 from pythonosc.osc_message_builder import OscMessageBuilder
 
 IP = '127.0.0.1'
 OSCPORT = 9000
-ADDRESS = '/cube/active'
+ADDRESS = '/cube/activate'
 
 def send(osc_arg):
     client = udp_client.UDPClient(IP, OSCPORT)
@@ -20,5 +21,6 @@ def send(osc_arg):
 if __name__ == "__main__":
     arg = 1
     print(send(arg))
+    sleep(3)
     arg = 0
     print(send(arg))
