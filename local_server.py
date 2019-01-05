@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import logging
+import json
 from websocket_server import WebsocketServer
 
 import trigger_selector
@@ -25,16 +26,23 @@ def client_left(client, server):
 
 def message_received(client, server, message):
     logger.info('Message "{}" has been received from {}:{}'.format(message, client['address'][0], client['address'][1]))
-    reply_message = 'Socket OK!'
-    server.send_message(client, reply_message)
-    logger.info('Message "{}" has been sent to {}:{}'.format(reply_message, client['address'][0], client['address'][1]))
 
-    # トリガーメッセージと入力がマッチしていればVRCへOSCメッセージを送信
-    value = trigger_selector.select(message)
-    if not value is -1:
-        logger.info('Triger selected! Value is {}.'.format(str(value)))
-        osc_msg = osc_sender.send(value)
-        logger.info('OSC Message "{}" has been sent to VRChat client'.format(osc_msg))
+    # 受け取ったJSONをパース(返り値はdict)
+    json_data = json.loads(message)
+
+    if json_data['Mode'] == 'speech':
+        reply_message = 'Socket OK!'
+        server.send_message(client, reply_message)
+        logger.info('Message "{}" has been sent to {}:{}'.format(reply_message, client['address'][0], client['address'][1]))
+        # debug
+        print(json_data['Message'])
+
+        # トリガーメッセージと入力がマッチしていればVRCへOSCメッセージを送信
+        value = trigger_selector.select(json_data['Message'])
+        if not value is -1:
+            logger.info('Triger selected! Value is {}.'.format(str(value)))
+            osc_msg = osc_sender.send(value)
+            logger.info('OSC Message "{}" has been sent to VRChat client'.format(osc_msg))
 
 
 if __name__ == "__main__":
