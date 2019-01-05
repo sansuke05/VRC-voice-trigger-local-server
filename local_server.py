@@ -2,6 +2,7 @@
 
 import logging
 import json
+import webbrowser
 from websocket_server import WebsocketServer
 
 import trigger_selector
@@ -46,6 +47,11 @@ def message_received(client, server, message):
 
 
 if __name__ == "__main__":
+    # ブラウザの起動
+    url = 'https://sansuke05.github.io/VRC-voice-trigger-web/'
+    webbrowser.open(url)
+
+    # サーバーの起動
     server = WebsocketServer(port=WSPORT, host=IP, loglevel=logging.INFO)
     server.set_fn_new_client(new_client)
     server.set_fn_client_left(client_left)
