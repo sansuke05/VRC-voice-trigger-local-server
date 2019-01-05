@@ -38,10 +38,10 @@ def message_received(client, server, message):
         print(json_data['Message'])
 
         # トリガーメッセージと入力がマッチしていればVRCへOSCメッセージを送信
-        value = trigger_selector.select(json_data['Message'])
+        (address, value) = trigger_selector.select(json_data['Message'])
         if not value is -1:
-            logger.info('Triger selected! Value is {}.'.format(str(value)))
-            osc_msg = osc_sender.send(value)
+            logger.info('Triger selected! Send Message is {} {}.'.format(address, str(value)))
+            osc_msg = osc_sender.send(address, value)
             logger.info('OSC Message "{}" has been sent to VRChat client'.format(osc_msg))
 
 
