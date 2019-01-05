@@ -5,6 +5,11 @@
             "address": "/cube/activate",
             "OnTrigerKey": "キューブ アクティブ",
             "OffTriggerKey": "キューブ オフ"
+        },
+        {
+            "address": "/windparticle/activate",
+            "OnTrigerKey": "ウインド ストリーム",
+            "OffTriggerKey": "マジック フィニッシュ"
         }
     ]
 }

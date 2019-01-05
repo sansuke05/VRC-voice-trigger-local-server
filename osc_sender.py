@@ -6,21 +6,21 @@ from pythonosc.osc_message_builder import OscMessageBuilder
 
 IP = '127.0.0.1'
 OSCPORT = 9000
-ADDRESS = '/cube/activate'
 
-def send(osc_arg):
+def send(address, osc_arg):
     client = udp_client.UDPClient(IP, OSCPORT)
-    message = OscMessageBuilder(address=ADDRESS)
+    message = OscMessageBuilder(address=address)
     message.add_arg(osc_arg)
     m = message.build()
     client.send(m)
 
-    return ADDRESS + ' ' + str(osc_arg)
+    return address + ' ' + str(osc_arg)
 
 
 if __name__ == "__main__":
+    address = '/cube/activate'
     arg = 1
-    print(send(arg))
+    print(send(address, arg))
     sleep(3)
     arg = 0
-    print(send(arg))
+    print(send(address, arg))
