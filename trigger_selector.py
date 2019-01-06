@@ -8,9 +8,14 @@ triggers = [
         'キューブ オフ':0 
     },
     { 
-        'address': '/windparticle/activate',
-        'ウインド ストリーム':1,
-        'マジック フィニッシュ':0
+        'address': '/magicparticle/activate',
+        '詠唱 開始':1,
+        '詠唱 終了':0
+    },
+    {
+        'address': '/light/activate',
+        '電気 つけて':1,
+        '電気 消して':0
     }
 ]
 
@@ -53,7 +58,8 @@ if __name__ == "__main__":
         'キューブだ！',
         'あれオフやんけ',
         'こやこや〜',
-        'くらえ！ウインドストリーム！'
+        '詠唱開始！',
+        '詠唱終了だ！よくやった'
     ]
 
     for txt in texts:
