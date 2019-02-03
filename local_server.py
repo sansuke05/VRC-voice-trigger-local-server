@@ -32,10 +32,8 @@ def message_received(client, server, message):
     json_data = json.loads(message)
 
     if json_data['Mode'] == 'speech':
-        reply_json_msg = '''{
-            "Status": "Socket OK!",
-            "Mode": "speech"
-        }'''
+        reply_json_msg = '{"Status": "Socket OK!", "Mode": "speech"}'
+        
         server.send_message(client, reply_json_msg)
         logger.info('Message "{}" has been sent to {}:{}'.format(reply_json_msg, client['address'][0], client['address'][1]))
         # debug
