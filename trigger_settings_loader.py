@@ -44,11 +44,6 @@ def get_world_names():
     
     return world_list
 
-# ファイルロード、ワールドリストの作成
-def setup():
-    load()
-    return get_world_names()
-
 
 # Unit Test
 if __name__ == "__main__":
