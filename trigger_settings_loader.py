@@ -6,6 +6,8 @@ import pprint
 
 PATH = 'TriggerSettings/*.json'
 
+json_dicts = []
+
 
 # TriggerSettingsのファイル一覧を取得
 def listup_setting_files():
@@ -14,7 +16,7 @@ def listup_setting_files():
 
 # それぞれのファイルを読み込み、文字列→json→辞書に変換し、1つのリストを作成
 def load():
-    json_dicts = []
+    global json_dicts
     files = listup_setting_files()
 
     for file in files:
@@ -30,12 +32,22 @@ def load():
         json_dicts.append(json_dic)
     #[END of loop]
 
-    return json_dicts
-
 
 # jsonリストからワールド名をパースし、ワールドリストを作成して返す
-def get_world_names(jsons):
-    pass
+def get_world_names():
+    global json_dicts
+    world_list = []
+
+    for jdic in json_dicts: 
+        world = jdic.get('WorldName')
+        world_list.append(world)
+    
+    return world_list
+
+# ファイルロード、ワールドリストの作成
+def setup():
+    load()
+    return get_world_names()
 
 
 # Unit Test
@@ -44,5 +56,7 @@ if __name__ == "__main__":
     for f in files:
         print(f)
     
-    l = load()
-    pprint.pprint(l)
+    load()
+    pprint.pprint(json_dicts)
+
+    print(get_world_names())
