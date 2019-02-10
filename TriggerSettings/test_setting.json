@@ -1,0 +1,15 @@
+{
+    "WorldName" : "HogeHoge",
+    "OSCButtonTrigers": [
+        {
+            "address": "/test/activate",
+            "OnTrigerKey": "テスト アクティブ",
+            "OffTriggerKey": "テスト オフ"
+        },
+        {
+            "address": "/avater/activate",
+            "OnTrigerKey": "召喚",
+            "OffTriggerKey": "消滅"
+        }
+    ]
+}
