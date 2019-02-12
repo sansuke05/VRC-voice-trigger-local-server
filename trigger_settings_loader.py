@@ -3,10 +3,9 @@
 import glob
 import json
 import pprint
+import trigger_data
 
 PATH = 'TriggerSettings/*.json'
-
-json_dicts = []
 
 
 # TriggerSettingsのファイル一覧を取得
@@ -16,7 +15,6 @@ def listup_setting_files():
 
 # それぞれのファイルを読み込み、文字列→json→辞書に変換し、1つのリストを作成
 def load():
-    global json_dicts
     files = listup_setting_files()
 
     for file in files:
@@ -29,16 +27,18 @@ def load():
             json_str += line
         
         json_dic = json.loads(json_str)
-        json_dicts.append(json_dic)
+        trigger_data.data_in_all_world.append(json_dic)
     #[END of loop]
+
+    # 現在のワールド設定にリストの先頭のワールドを設定
+    trigger_data.data_in_current_world = trigger_data.data_in_all_world[0]
 
 
 # jsonリストからワールド名をパースし、ワールドリストを作成して返す
 def get_world_names():
-    global json_dicts
     world_list = []
 
-    for jdic in json_dicts: 
+    for jdic in trigger_data.data_in_all_world: 
         world = jdic.get('WorldName')
         world_list.append(world)
     
@@ -52,6 +52,7 @@ if __name__ == "__main__":
         print(f)
     
     load()
-    pprint.pprint(json_dicts)
+    pprint.pprint(trigger_data.data_in_all_world)
+    pprint.pprint(trigger_data.data_in_current_world)
 
     print(get_world_names())
