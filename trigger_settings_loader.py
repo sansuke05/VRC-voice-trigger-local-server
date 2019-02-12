@@ -15,6 +15,10 @@ def listup_setting_files():
 
 # それぞれのファイルを読み込み、文字列→json→辞書に変換し、1つのリストを作成
 def load():
+    # リストが空でないかどうか
+    if trigger_data.data_in_all_world != []:
+        trigger_data.data_in_all_world.clear()
+
     files = listup_setting_files()
 
     for file in files:
