@@ -7,9 +7,14 @@
             "OffTriggerKey": "キューブ オフ"
         },
         {
-            "address": "/windparticle/activate",
-            "OnTrigerKey": "ウインド ストリーム",
-            "OffTriggerKey": "マジック フィニッシュ"
+            "address": "/magicparticle/activate",
+            "OnTrigerKey": "詠唱 開始",
+            "OffTriggerKey": "詠唱 終了"
+        },
+        {
+            "address": "/light/activate",
+            "OnTrigerKey": "電気 つけて",
+            "OffTriggerKey": "電気 消して"
         }
     ]
 }

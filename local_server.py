@@ -7,6 +7,7 @@ from websocket_server import WebsocketServer
 
 import trigger_selector
 import osc_sender
+from utility import *
 
 IP = '127.0.0.1'
 WSPORT = 12345
@@ -33,7 +34,6 @@ def message_received(client, server, message):
 
     if json_data['Mode'] == 'speech':
         reply_json_msg = '{"Status": "Socket OK!", "Mode": "speech"}'
-        
         server.send_message(client, reply_json_msg)
         logger.info('Message "{}" has been sent to {}:{}'.format(reply_json_msg, client['address'][0], client['address'][1]))
         # debug
@@ -45,6 +45,17 @@ def message_received(client, server, message):
             logger.info('Triger selected! Send Message is {} {}.'.format(address, str(value)))
             osc_msg = osc_sender.send(address, value)
             logger.info('OSC Message "{}" has been sent to VRChat client'.format(osc_msg))
+
+    elif json_data['Mode'] == 'init':
+        reply_json_msg = setup()
+        server.send_message(client, reply_json_msg)
+        logger.info('Message "{}" has been sent to {}:{}'.format(reply_json_msg, client['address'][0], client['address'][1]))
+
+    elif json_data['Mode'] == 'chworld':
+        change_current_world(json_data['Message'])
+        reply_json_msg = '{"Status": "Socket OK!", "Mode": "chworld"}'
+        server.send_message(client, reply_json_msg)
+        logger.info('Message "{}" has been sent to {}:{}'.format(reply_json_msg, client['address'][0], client['address'][1]))
 
 
 if __name__ == "__main__":
