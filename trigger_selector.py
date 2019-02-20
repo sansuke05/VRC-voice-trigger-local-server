@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 import re
+import trigger_data
+from utility import *
 
 triggers = [
     { 
@@ -19,19 +21,28 @@ triggers = [
     }
 ]
 
+
+def convert_key_val_to_integer(key_value):
+    if key_value == 'OnTrigerKey':
+        return 1
+    elif key_value == 'OffTriggerKey':
+        return 0
+    else:
+        return -1
+
+
 # トリガーキーと入力文字をパターンマッチさせる
 def select(input_text):
-    global triggers
+    #global triggers
     address = ''
 
-    for trigger in triggers:
-        for k in trigger.keys():
-            if k is 'address':
-                address = trigger.get(k)
-                continue
-            
+    for trigger_tmp in trigger_data.data_in_current_world['OSCButtonTrigers']:
+        trigger = dict(trigger_tmp)
+        address = trigger.pop('address')
+
+        for (key_val, triger_key) in trigger.items():
             pattern = r'^'
-            key_parts = k.split(' ')
+            key_parts = triger_key.split(' ')
 
             # 正規表現の作成
             for p in key_parts:
@@ -43,7 +54,8 @@ def select(input_text):
             m = re.search(pattern, input_text)
 
             if m:
-                return (address, trigger.get(k))
+                value = convert_key_val_to_integer(key_val)
+                return (address, value)
     #[loop END]
     return ('', -1)
 
@@ -59,8 +71,13 @@ if __name__ == "__main__":
         'あれオフやんけ',
         'こやこや〜',
         '詠唱開始！',
-        '詠唱終了だ！よくやった'
+        '詠唱終了だ！よくやった',
+        '電気つけてよ',
+        '電気を消してってば！',
     ]
+
+    setup()
 
     for txt in texts:
         print(select(txt))
+        #print(trigger_data.data_in_current_world)
