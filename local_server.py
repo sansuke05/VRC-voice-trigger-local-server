@@ -51,6 +51,12 @@ def message_received(client, server, message):
         server.send_message(client, reply_json_msg)
         logger.info('Message "{}" has been sent to {}:{}'.format(reply_json_msg, client['address'][0], client['address'][1]))
 
+    elif json_data['Mode'] == 'chworld':
+        change_current_world(json_data['Message'])
+        reply_json_msg = '{"Status": "Socket OK!", "Mode": "chworld"}'
+        server.send_message(client, reply_json_msg)
+        logger.info('Message "{}" has been sent to {}:{}'.format(reply_json_msg, client['address'][0], client['address'][1]))
+
 
 if __name__ == "__main__":
     # ブラウザの起動
