@@ -1,0 +1,15 @@
+{
+    "WorldName" : "AAAA",
+    "OSCButtonTrigers": [
+        {
+            "address": "/anim/activate",
+            "OnTrigerKey": "回転",
+            "OffTriggerKey": "停止"
+        },
+        {
+            "address": "/music/activate",
+            "OnTrigerKey": "音楽 流して",
+            "OffTriggerKey": "音楽 止めて"
+        }
+    ]
+}
