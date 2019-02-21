@@ -24,7 +24,7 @@ def load():
     for file in files:
         json_str = ''
         buffar = None
-        with open(file, 'r') as f:
+        with open(file, 'r', encoding='utf-8_sig') as f:
             buffar = f.readlines()
         
         for line in buffar:

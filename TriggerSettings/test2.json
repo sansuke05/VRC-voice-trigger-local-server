@@ -1,5 +1,5 @@
 {
-    "WorldName" : "AAAA",
+    "WorldName" : "OSC Test World Extra",
     "OSCButtonTrigers": [
         {
             "address": "/anim/activate",
