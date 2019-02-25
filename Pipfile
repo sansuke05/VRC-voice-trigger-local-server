@@ -5,6 +5,7 @@ verify_ssl = true
 
 [dev-packages]
 pylint = "*"
+pyinstaller = "*"
 
 [packages]
 websocket-server = {git = "https://github.com/Pithikos/python-websocket-server"}
