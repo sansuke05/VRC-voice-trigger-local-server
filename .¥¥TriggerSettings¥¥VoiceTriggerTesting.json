@@ -1,0 +1,20 @@
+{
+    "WorldName" : "VoiceTriggerTesting",
+    "OSCButtonTrigers": [
+        {
+            "address": "/cube/activate",
+            "OnTrigerKey": "キューブ アクティブ",
+            "OffTriggerKey": "キューブ オフ"
+        },
+        {
+            "address": "/magicparticle/activate",
+            "OnTrigerKey": "詠唱 開始",
+            "OffTriggerKey": "詠唱 終了"
+        },
+        {
+            "address": "/light/activate",
+            "OnTrigerKey": "電気 つけて",
+            "OffTriggerKey": "電気 消して"
+        }
+    ]
+}
