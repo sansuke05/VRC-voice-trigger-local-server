@@ -1,12 +1,28 @@
 # -*- coding: utf-8 -*-
 
+import os
 import json
 import trigger_settings_loader
 import trigger_data
 
+# for mac or linux
+# PATH = './TriggerSettings'
+# F_PATH = PATH + '/VoiceTriggerTesting.json'
+# for windows
+PATH = '.¥¥TriggerSettings'
+F_PATH = PATH + '¥¥VoiceTriggerTesting.json'
+
 
 def createJSON(jdic):
     return json.dumps(jdic)
+
+
+def check_dir():
+    if not os.path.exists(PATH):
+        os.mkdir(PATH)
+
+        with open(F_PATH, mode='w') as f:
+            f.write(trigger_data.test_world_data)
 
 
 def setup():
@@ -28,3 +44,8 @@ def change_current_world(selected_world):
             break
     #[END of loop]
     print(trigger_data.data_in_current_world['WorldName'])
+
+
+# Unit test
+if __name__ == "__main__":
+    check_dir()
