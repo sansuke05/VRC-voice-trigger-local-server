@@ -1,5 +1,5 @@
 {
-    "WorldName" : "OSCTestWorld",
+    "WorldName" : "VoiceTriggerTesting",
     "OSCButtonTrigers": [
         {
             "address": "/cube/activate",

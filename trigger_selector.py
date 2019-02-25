@@ -48,7 +48,7 @@ def select(input_text):
             for p in key_parts:
                 pattern += r'(?=.*{0})'.format(p)
             pattern += r'.*$'
-            print(pattern)
+            #print(pattern)
 
             # パターンマッチ
             m = re.search(pattern, input_text)
