@@ -9,8 +9,8 @@ import trigger_data
 # PATH = './TriggerSettings'
 # F_PATH = PATH + '/VoiceTriggerTesting.json'
 # for windows
-PATH = '.¥¥TriggerSettings'
-F_PATH = PATH + '¥¥VoiceTriggerTesting.json'
+PATH = 'TriggerSettings'
+F_PATH = PATH + '\\VoiceTriggerTesting.json'
 
 
 def createJSON(jdic):
@@ -21,7 +21,7 @@ def check_dir():
     if not os.path.exists(PATH):
         os.mkdir(PATH)
 
-        with open(F_PATH, mode='w') as f:
+        with open(F_PATH, mode='w', encoding='utf-8_sig') as f:
             f.write(trigger_data.test_world_data)
 
 

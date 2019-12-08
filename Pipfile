@@ -10,6 +10,7 @@ pylint = "*"
 websocket-server = {git = "https://github.com/Pithikos/python-websocket-server"}
 websocket-client = "*"
 python-osc = "*"
+pyinstaller = "*"
 
 [requires]
 python_version = "3.6"

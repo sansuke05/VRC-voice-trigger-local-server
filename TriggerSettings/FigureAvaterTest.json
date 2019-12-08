@@ -1,0 +1,15 @@
+{
+    "WorldName" : "FigureAvaterTest",
+    "OSCButtonTrigers": [
+        {
+            "address": "/sakura/playOkaeri",
+            "OnTrigerKey": "ただいま",
+            "OffTriggerKey": "AutoOff"
+        },
+        {
+            "address": "/sakura/playErai",
+            "OnTrigerKey": "えらい",
+            "OffTriggerKey": "AutoOff"
+        }
+    ]
+}

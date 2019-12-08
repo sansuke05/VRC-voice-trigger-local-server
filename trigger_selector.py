@@ -31,10 +31,17 @@ def convert_key_val_to_integer(key_value):
         return -1
 
 
+def is_auto_off(trigger):
+    if trigger['OffTriggerKey'] == 'AutoOff':
+        return True
+    return False
+
+
 # トリガーキーと入力文字をパターンマッチさせる
 def select(input_text):
     #global triggers
     address = ''
+    auto_off = False
 
     for trigger_tmp in trigger_data.data_in_current_world['OSCButtonTrigers']:
         trigger = dict(trigger_tmp)
@@ -55,9 +62,13 @@ def select(input_text):
 
             if m:
                 value = convert_key_val_to_integer(key_val)
-                return (address, value)
+                # OnTriggerKeyならAutoOffか確認
+                if value == 1 and is_auto_off(trigger):
+                    auto_off = True
+                    return (address, value, auto_off)
+                return (address, value, auto_off)
     #[loop END]
-    return ('', -1)
+    return ('', -1, auto_off)
 
 
 # 単体テスト用
