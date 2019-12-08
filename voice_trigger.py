@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import logging
+from time import sleep
 import json
 import webbrowser
 from websocket_server import WebsocketServer
@@ -42,11 +43,17 @@ def message_received(client, server, message):
         #print(json_data['Message'])
 
         # トリガーメッセージと入力がマッチしていればVRCへOSCメッセージを送信
-        (address, value) = trigger_selector.select(json_data['Message'])
+        (address, value, auto_off) = trigger_selector.select(json_data['Message'])
         if not value is -1:
             #logger.info('Triger selected! Send Message is {} {}.'.format(address, str(value)))
             osc_msg = osc_sender.send(address, value)
             logger.info('OSC Message "{}" has been sent to VRChat client'.format(osc_msg))
+
+            # オートオフ設定なら1秒後にoffメッセージを送信
+            if auto_off:
+                sleep(1)
+                osc_msg = osc_sender.send(address, 0)
+                logger.info('[Auto Off]OSC Message "{}" has been sent to VRChat client'.format(osc_msg))
 
     elif json_data['Mode'] == 'init':
         reply_json_msg = setup()
