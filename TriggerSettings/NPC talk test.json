@@ -1,5 +1,5 @@
 {
-    "WorldName" : "FigureAvaterTest",
+    "WorldName" : "NPC talk test",
     "OSCButtonTrigers": [
         {
             "address": "/sakura/playOkaeri",
