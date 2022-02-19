@@ -1,0 +1,22 @@
+{
+    "WorldName": "Avatar OSC test",
+    "type": "Avatar",
+    "OSCButtonTrigers": [
+        {
+            "address": "/avatar/parameters/AccesoryState",
+            "type": "bool",
+            "OnTrigerKey": "めんめ 音",
+            "OffTriggerKey": "めんめ オフ"
+        },
+        {
+            "address": "/avatar/parameters/ClothesState",
+            "type": "int",
+            "changeTriggerKeys": [
+                "デフォ",
+                "アイドル",
+                "スイート",
+                "セーラー"
+            ]
+        }
+    ]
+}
