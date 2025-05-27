@@ -1,0 +1,230 @@
+version = 1
+revision = 2
+requires-python = ">=3.12"
+
+[[package]]
+name = "altgraph"
+version = "0.17.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/5a/13/a7cfa43856a7b8e4894848ec8f71cd9e1ac461e51802391a3e2101c60ed6/altgraph-0.17.3.tar.gz", hash = "sha256:ad33358114df7c9416cdb8fa1eaa5852166c505118717021c6a8c7c7abbd03dd", size = 48328, upload-time = "2022-09-25T17:42:25.84Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/cc/ff/88d277ba936d226b0f6dbd6711145f90fcfeed3aa9455c1c2f62c8ffec5b/altgraph-0.17.3-py2.py3-none-any.whl", hash = "sha256:c8ac1ca6772207179ed8003ce7687757c04b0b71536f81e2ac5755c6226458fe", size = 21241, upload-time = "2022-09-25T17:42:23.715Z" },
+]
+
+[[package]]
+name = "astroid"
+version = "2.11.7"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "lazy-object-proxy" },
+    { name = "setuptools" },
+    { name = "wrapt" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/47/fa/cedd4cf37634b2fcc3773cedd0a9ca05fed2fa014d3d03815b04b7738ade/astroid-2.11.7.tar.gz", hash = "sha256:bb24615c77f4837c707669d16907331374ae8a964650a66999da3f5ca68dc946", size = 206015, upload-time = "2022-07-09T14:51:00.971Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e4/3b/f1aa1bd41e8188b3a3605d71b699b73695fc7ac862cbed23ed9dee707251/astroid-2.11.7-py3-none-any.whl", hash = "sha256:86b0a340a512c65abf4368b80252754cda17c02cdbbd3f587dddf98112233e7b", size = 251173, upload-time = "2022-07-09T14:50:59.226Z" },
+]
+
+[[package]]
+name = "colorama"
+version = "0.4.6"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44", size = 27697, upload-time = "2022-10-25T02:36:22.414Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6", size = 25335, upload-time = "2022-10-25T02:36:20.889Z" },
+]
+
+[[package]]
+name = "future"
+version = "0.18.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/8f/2e/cf6accf7415237d6faeeebdc7832023c90e0282aa16fd3263db0eb4715ec/future-0.18.3.tar.gz", hash = "sha256:34a17436ed1e96697a86f9de3d15a3b0be01d8bc8de9c1dffd59fb8234ed5307", size = 840896, upload-time = "2023-01-13T03:15:17.607Z" }
+
+[[package]]
+name = "isort"
+version = "5.10.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/ab/e9/964cb0b2eedd80c92f5172f1f8ae0443781a9d461c1372a3ce5762489593/isort-5.10.1.tar.gz", hash = "sha256:e8443a5e7a020e9d7f97f1d7d9cd17c88bcb3bc7e218bf9cf5095fe550be2951", size = 174062, upload-time = "2021-11-09T05:42:46.759Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b8/5b/f18e227df38b94b4ee30d2502fd531bebac23946a2497e5595067a561274/isort-5.10.1-py3-none-any.whl", hash = "sha256:6f62d78e2f89b4500b080fe3a81690850cd254227f27f75c3a0c491a1f351ba7", size = 103430, upload-time = "2021-11-09T05:42:44.651Z" },
+]
+
+[[package]]
+name = "lazy-object-proxy"
+version = "1.7.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/75/93/3fc1cc28f71dd10b87a53b9d809602d7730e84cc4705a062def286232a9c/lazy-object-proxy-1.7.1.tar.gz", hash = "sha256:d609c75b986def706743cdebe5e47553f4a5a1da9c5ff66d76013ef396b5a8a4", size = 41995, upload-time = "2021-12-15T16:56:56.1Z" }
+
+[[package]]
+name = "macholib"
+version = "1.16.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "altgraph" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/46/92/bffe4576b383f20995ffb15edccf1c97d2e39f9a8c72136836407f099277/macholib-1.16.2.tar.gz", hash = "sha256:557bbfa1bb255c20e9abafe7ed6cd8046b48d9525db2f9b77d3122a63a2a8bf8", size = 59027, upload-time = "2022-09-25T17:49:05.196Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5f/8c/8d7c7437f2799f570f9f4cb1fc974f671eff6fecd659f5e4097858a014ef/macholib-1.16.2-py2.py3-none-any.whl", hash = "sha256:44c40f2cd7d6726af8fa6fe22549178d3a4dfecc35a9cd15ea916d9c83a688e0", size = 38018, upload-time = "2022-09-25T17:49:02.928Z" },
+]
+
+[[package]]
+name = "mccabe"
+version = "0.7.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/e7/ff/0ffefdcac38932a54d2b5eed4e0ba8a408f215002cd178ad1df0f2806ff8/mccabe-0.7.0.tar.gz", hash = "sha256:348e0240c33b60bbdf4e523192ef919f28cb2c3d7d5c7794f74009290f236325", size = 9658, upload-time = "2022-01-24T01:14:51.113Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/27/1a/1f68f9ba0c207934b35b86a8ca3aad8395a3d6dd7921c0686e23853ff5a9/mccabe-0.7.0-py2.py3-none-any.whl", hash = "sha256:6c2d30ab6be0e4a46919781807b4f0d834ebdd6c6e3dca0bda5a15f863427b6e", size = 7350, upload-time = "2022-01-24T01:14:49.62Z" },
+]
+
+[[package]]
+name = "pefile"
+version = "2023.2.7"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/78/c5/3b3c62223f72e2360737fd2a57c30e5b2adecd85e70276879609a7403334/pefile-2023.2.7.tar.gz", hash = "sha256:82e6114004b3d6911c77c3953e3838654b04511b8b66e8583db70c65998017dc", size = 74854, upload-time = "2023-02-07T12:23:55.958Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/55/26/d0ad8b448476d0a1e8d3ea5622dc77b916db84c6aa3cb1e1c0965af948fc/pefile-2023.2.7-py3-none-any.whl", hash = "sha256:da185cd2af68c08a6cd4481f7325ed600a88f6a813bad9dea07ab3ef73d8d8d6", size = 71791, upload-time = "2023-02-07T12:28:36.678Z" },
+]
+
+[[package]]
+name = "pyinstaller"
+version = "3.6"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "altgraph" },
+    { name = "setuptools" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/3c/c9/c3f9bc64eb11eee6a824686deba6129884c8cbdf70e750661773b9865ee0/PyInstaller-3.6.tar.gz", hash = "sha256:3730fa80d088f8bb7084d32480eb87cbb4ddb64123363763cf8f2a1378c1c4b7", size = 3539593, upload-time = "2020-01-09T18:11:05.461Z" }
+
+[[package]]
+name = "pylint"
+version = "2.2.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "astroid" },
+    { name = "colorama", marker = "sys_platform == 'win32'" },
+    { name = "isort" },
+    { name = "mccabe" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/92/8e/e86eb8dbc10ee845b1c04ed9eaeafb981331f6db5dc05ba21555fcbe7595/pylint-2.2.2.tar.gz", hash = "sha256:689de29ae747642ab230c6d37be2b969bf75663176658851f456619aacf27492", size = 568313, upload-time = "2018-11-28T08:49:55.681Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a5/06/ecef826f319055e6b231716730d7f9047dd7524ffda224b521d989f085b6/pylint-2.2.2-py3-none-any.whl", hash = "sha256:771467c434d0d9f081741fec1d64dfb011ed26e65e12a28fe06ca2f61c4d556c", size = 750435, upload-time = "2018-11-28T08:49:52.376Z" },
+]
+
+[[package]]
+name = "python-osc"
+version = "1.9.3"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/1e/6e/770a91c92e4e8db6213764fb78531dd26a4982000d9b325881f3599835e2/python_osc-1.9.3.tar.gz", hash = "sha256:bd0fa40def43ce509894709feb0e18f02192aca192c5e6c8fe2ba69e58f21794", size = 33328, upload-time = "2024-12-23T20:24:50.939Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/57/04/01b3de6a7565cfc20f3bf4fce959b099ad30a08157865436d48cc02f6c08/python_osc-1.9.3-py3-none-any.whl", hash = "sha256:7def2075be72f07bae5a4c1a55cc7d907b247f4a5d910f3159ed30ac2b1f17cc", size = 43808, upload-time = "2024-12-23T20:24:48.358Z" },
+]
+
+[[package]]
+name = "setuptools"
+version = "59.6.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/6a/fa/5ec0fa9095c9b72cb1c31a8175c4c6745bf5927d1045d7a70df35d54944f/setuptools-59.6.0.tar.gz", hash = "sha256:22c7348c6d2976a52632c67f7ab0cdf40147db7789f9aed18734643fe9cf3373", size = 2281973, upload-time = "2021-12-12T20:46:30.376Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b0/3a/88b210db68e56854d0bcf4b38e165e03be377e13907746f825790f3df5bf/setuptools-59.6.0-py3-none-any.whl", hash = "sha256:4ce92f1e1f8f01233ee9952c04f6b81d1e02939d6e1b488428154974a4d0783e", size = 952597, upload-time = "2021-12-12T20:46:28.631Z" },
+]
+
+[[package]]
+name = "six"
+version = "1.16.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926", size = 34041, upload-time = "2021-05-05T14:18:18.379Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d9/5a/e7c31adbe875f2abbb91bd84cf2dc52d792b5a01506781dbcf25c91daf11/six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254", size = 11053, upload-time = "2021-05-05T14:18:17.237Z" },
+]
+
+[[package]]
+name = "typed-ast"
+version = "1.5.5"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f9/7e/a424029f350aa8078b75fd0d360a787a273ca753a678d1104c5fa4f3072a/typed_ast-1.5.5.tar.gz", hash = "sha256:94282f7a354f36ef5dbce0ef3467ebf6a258e370ab33d5b40c249fa996e590dd", size = 252841, upload-time = "2023-07-04T18:38:08.524Z" }
+
+[[package]]
+name = "typing-extensions"
+version = "4.1.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/b1/5a/8b5fbb891ef3f81fc923bf3cb4a578c0abf9471eb50ce0f51c74212182ab/typing_extensions-4.1.1.tar.gz", hash = "sha256:1a9462dcc3347a79b1f1c0271fbe79e844580bb598bafa1ed208b94da3cdcd42", size = 26694, upload-time = "2022-02-14T03:19:57.426Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/45/6b/44f7f8f1e110027cf88956b59f2fad776cca7e1704396d043f89effd3a0e/typing_extensions-4.1.1-py3-none-any.whl", hash = "sha256:21c85e0fe4b9a155d0799430b0ad741cdce7e359660ccbd8b530613e8df88ce2", size = 26844, upload-time = "2022-02-14T03:19:55.773Z" },
+]
+
+[[package]]
+name = "vrc-voice-trigger-local-server"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "altgraph" },
+    { name = "astroid" },
+    { name = "future" },
+    { name = "isort" },
+    { name = "lazy-object-proxy" },
+    { name = "macholib" },
+    { name = "mccabe" },
+    { name = "pefile" },
+    { name = "pyinstaller" },
+    { name = "pylint" },
+    { name = "python-osc" },
+    { name = "setuptools" },
+    { name = "six" },
+    { name = "typed-ast" },
+    { name = "typing-extensions" },
+    { name = "websocket-client" },
+    { name = "websocket-server" },
+    { name = "wrapt" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "altgraph", specifier = "==0.17.3" },
+    { name = "astroid", specifier = "==2.11.7" },
+    { name = "future", specifier = "==0.18.3" },
+    { name = "isort", specifier = "==5.10.1" },
+    { name = "lazy-object-proxy", specifier = "==1.7.1" },
+    { name = "macholib", specifier = "==1.16.2" },
+    { name = "mccabe", specifier = "==0.7.0" },
+    { name = "pefile", specifier = "==2023.2.7" },
+    { name = "pyinstaller", specifier = "==3.6" },
+    { name = "pylint", specifier = "==2.2.2" },
+    { name = "python-osc", specifier = ">=1.9.3" },
+    { name = "setuptools", specifier = "==59.6.0" },
+    { name = "six", specifier = "==1.16.0" },
+    { name = "typed-ast", specifier = "==1.5.5" },
+    { name = "typing-extensions", specifier = "==4.1.1" },
+    { name = "websocket-client", specifier = "==0.54.0" },
+    { name = "websocket-server", specifier = ">=0.6.4" },
+    { name = "wrapt", specifier = "==1.15.0" },
+]
+
+[[package]]
+name = "websocket-client"
+version = "0.54.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "six" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/35/d4/14e446a82bc9172d088ebd81c0b02c5ca8481bfeecb13c9ef07998f9249b/websocket_client-0.54.0.tar.gz", hash = "sha256:e51562c91ddb8148e791f0155fdb01325d99bb52c4cdbb291aee7a3563fd0849", size = 36413, upload-time = "2018-11-01T04:35:16.66Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/26/2d/f749a5c82f6192d77ed061a38e02001afcba55fe8477336d26a950ab17ce/websocket_client-0.54.0-py2.py3-none-any.whl", hash = "sha256:8c8bf2d4f800c3ed952df206b18c28f7070d9e3dcbd6ca6291127574f57ee786", size = 200115, upload-time = "2018-11-01T04:35:20.98Z" },
+]
+
+[[package]]
+name = "websocket-server"
+version = "0.6.4"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/80/19/1587bc8033debcb42d8176ca93cc44c8c874a043a1a8513e4890ad6447fb/websocket_server-0.6.4.tar.gz", hash = "sha256:a8a02d575905e50f6af90bbbc37d23d7e1b027630897f0eeefed6a3fb3c22e07", size = 8696, upload-time = "2021-12-19T16:34:35.826Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8e/9e/510086a9ed0dee3830da838f9207f5c787487813d5eb74eb19fe306e6a3e/websocket_server-0.6.4-py3-none-any.whl", hash = "sha256:aca2d8f7569c82fe3e949cbae1f9d3f3035ae15f1d4048085431c94b7dfd35be", size = 7534, upload-time = "2021-12-19T16:34:34.597Z" },
+]
+
+[[package]]
+name = "wrapt"
+version = "1.15.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f8/7d/73e4e3cdb2c780e13f9d87dc10488d7566d8fd77f8d68f0e416bfbd144c7/wrapt-1.15.0.tar.gz", hash = "sha256:d06730c6aed78cee4126234cf2d071e01b44b915e725a6cb439a879ec9754a3a", size = 53519, upload-time = "2023-02-27T01:58:31.241Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f8/f8/e068dafbb844c1447c55b23c921f3d338cddaba4ea53187a7dd0058452d9/wrapt-1.15.0-py3-none-any.whl", hash = "sha256:64b1df0f83706b4ef4cfb4fb0e4c2669100fd7ecacfb59e091fad300d4e04640", size = 22007, upload-time = "2023-02-27T01:58:28.469Z" },
+]
