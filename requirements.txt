@@ -4,7 +4,7 @@ future==0.18.3
 macholib==1.16.2
 pefile==2023.2.7
 python-osc==1.7.0
-setuptools==59.6.0
+setuptools==78.1.1
 six==1.16.0
 websocket-client==0.54.0
 websocket-server
@@ -13,7 +13,7 @@ isort==5.10.1
 lazy-object-proxy==1.7.1
 mccabe==0.7.0
 pylint==2.2.2
-setuptools==59.6.0
+setuptools==78.1.1
 typed-ast==1.5.5
 typing-extensions==4.1.1
 wrapt==1.15.0
