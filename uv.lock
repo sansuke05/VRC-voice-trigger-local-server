@@ -1,5 +1,5 @@
 version = 1
-revision = 2
+revision = 3
 requires-python = ">=3.12"
 
 [[package]]
@@ -77,6 +77,15 @@ wheels = [
 ]
 
 [[package]]
+name = "packaging"
+version = "26.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/d7/f1/e7a6dd94a8d4a5626c03e4e99c87f241ba9e350cd9e6d75123f992427270/packaging-26.2.tar.gz", hash = "sha256:ff452ff5a3e828ce110190feff1178bb1f2ea2281fa2075aadb987c2fb221661", size = 228134, upload-time = "2026-04-24T20:15:23.917Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/df/b2/87e62e8c3e2f4b32e5fe99e0b86d576da1312593b39f47d8ceef365e95ed/packaging-26.2-py3-none-any.whl", hash = "sha256:5fc45236b9446107ff2415ce77c807cee2862cb6fac22b8a73826d0693b0980e", size = 100195, upload-time = "2026-04-24T20:15:22.081Z" },
+]
+
+[[package]]
 name = "pefile"
 version = "2023.2.7"
 source = { registry = "https://pypi.org/simple" }
@@ -87,13 +96,42 @@ wheels = [
 
 [[package]]
 name = "pyinstaller"
-version = "3.6"
+version = "5.13.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "altgraph" },
+    { name = "macholib", marker = "sys_platform == 'darwin'" },
+    { name = "pefile", marker = "sys_platform == 'win32'" },
+    { name = "pyinstaller-hooks-contrib" },
+    { name = "pywin32-ctypes", marker = "sys_platform == 'win32'" },
     { name = "setuptools" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/3c/c9/c3f9bc64eb11eee6a824686deba6129884c8cbdf70e750661773b9865ee0/PyInstaller-3.6.tar.gz", hash = "sha256:3730fa80d088f8bb7084d32480eb87cbb4ddb64123363763cf8f2a1378c1c4b7", size = 3539593, upload-time = "2020-01-09T18:11:05.461Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/21/a7/f3caf846fcba1a840074b843e948272393f4458e9a709a511ce7e43e8ed5/pyinstaller-5.13.1.tar.gz", hash = "sha256:a2e7a1d76a7ac26f1db849d691a374f2048b0e204233028d25d79a90ecd1fec8", size = 4094949, upload-time = "2023-08-26T15:26:26.449Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8c/87/1ed7c8db339ba2bcfb0c08c423d5cca78adc9d7860a92669b615e5a35ca3/pyinstaller-5.13.1-py3-none-macosx_10_13_universal2.whl", hash = "sha256:3c9cfe6d5d2f392d5d47389f6d377a8f225db460cdd01048b5a3de1d99c24ebe", size = 934771, upload-time = "2023-08-26T15:25:22.362Z" },
+    { url = "https://files.pythonhosted.org/packages/2a/87/ee94da2a4f3ac310d4d04de9ff597e4d9863e117722ddd972b988e90b8c3/pyinstaller-5.13.1-py3-none-manylinux2014_aarch64.whl", hash = "sha256:29341d2e86d5ce7df993e797ee96ef679041fc85376d31c35c7b714085a21299", size = 662958, upload-time = "2023-08-26T15:25:26.888Z" },
+    { url = "https://files.pythonhosted.org/packages/57/b2/388ff0f49ef4f2553637a635f07cfd16da1ab2bafbc21e8f8e2aa09e6517/pyinstaller-5.13.1-py3-none-manylinux2014_i686.whl", hash = "sha256:ad6e31a8f35a463c6140e4cf979859197edc9831a1039253408b0fe5eec274dc", size = 664568, upload-time = "2023-08-26T15:25:30.642Z" },
+    { url = "https://files.pythonhosted.org/packages/20/a9/3dc0276e3fab70dc1b78aa87c4356cbb3a411c3a522a5a7c63ffd905c8e8/pyinstaller-5.13.1-py3-none-manylinux2014_ppc64le.whl", hash = "sha256:5d801db3ceee58d01337473ea897e96e4bb21421a169dd7cf8716754617ff7fc", size = 668354, upload-time = "2023-08-26T15:25:34.905Z" },
+    { url = "https://files.pythonhosted.org/packages/8d/75/16e3eb0cb957de2819ed90dc3832e916b14db1575a88aec9f457316e385e/pyinstaller-5.13.1-py3-none-manylinux2014_s390x.whl", hash = "sha256:2519db3edec87d8c33924c2c4b7e176d8c1bbd9ba892d77efb67281925e621d6", size = 660784, upload-time = "2023-08-26T15:25:39.016Z" },
+    { url = "https://files.pythonhosted.org/packages/cc/7c/e4c263766b97f46da93616221348c29590104592e5985e5ad17fd6b68ad8/pyinstaller-5.13.1-py3-none-manylinux2014_x86_64.whl", hash = "sha256:e033218c8922f0342b6095fb444ecb3bc6747dfa58cac5eac2b985350f4b681e", size = 660663, upload-time = "2023-08-26T15:25:43.127Z" },
+    { url = "https://files.pythonhosted.org/packages/ad/a3/265c35367f497026cded1dcdc7985b5dac890a656c7d567763309bc00ecf/pyinstaller-5.13.1-py3-none-musllinux_1_1_aarch64.whl", hash = "sha256:086e68aa1e72f6aa13b9d170a395755e2b194b8ab410caeed02d16b432410c8c", size = 664706, upload-time = "2023-08-26T15:25:47.383Z" },
+    { url = "https://files.pythonhosted.org/packages/b5/2f/a78f069b7ad64150baa4796a5665259aa16a5a338463bc08de715bffeb0e/pyinstaller-5.13.1-py3-none-musllinux_1_1_x86_64.whl", hash = "sha256:aa609aca62edd8cdcf7740677a21525e6c23b5e9a8f821ec8a80c68947771b5d", size = 661331, upload-time = "2023-08-26T15:25:51.329Z" },
+    { url = "https://files.pythonhosted.org/packages/35/b9/adeba43bbc9053afff38220753c83374ce4449171e43ffa67b43c1db6ea7/pyinstaller-5.13.1-py3-none-win32.whl", hash = "sha256:b8d4000af72bf72f8185d420cd0a0aee0961f03a5c3511dc3ff08cdaef0583de", size = 1216645, upload-time = "2023-08-26T15:25:57.26Z" },
+    { url = "https://files.pythonhosted.org/packages/55/78/f54dc3f30387b87248bc15acf5b804fed48d1e26b71e7f3400bd0487b51b/pyinstaller-5.13.1-py3-none-win_amd64.whl", hash = "sha256:b70ebc10811b30bbea4cf5b81fd1477db992c2614cf215edc987cda9c5468911", size = 1274042, upload-time = "2023-08-26T15:26:03.664Z" },
+    { url = "https://files.pythonhosted.org/packages/93/7d/99a08ac845110388caacf4f104ed3b2d5fd9c5d917c69e01502a30d6ffb0/pyinstaller-5.13.1-py3-none-win_arm64.whl", hash = "sha256:78d1601a11475b95dceff6eaf0c9cd74d93e3f47b5ce4ad63cd76e7a369d3d04", size = 1207689, upload-time = "2023-08-26T15:26:09.744Z" },
+]
+
+[[package]]
+name = "pyinstaller-hooks-contrib"
+version = "2026.6"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "packaging" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/94/5b/c9fe0db5e83ee1c39b2258fa21d23b15e1a60786b6c5990ee5074ead8bb6/pyinstaller_hooks_contrib-2026.6.tar.gz", hash = "sha256:bef5002c32f4f50bd55b005da12cff64eca8783e7eaf86a06a62410164bab725", size = 173354, upload-time = "2026-06-08T22:37:16.152Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e7/31/f2d7343d8ed5f7c4678377886f6ce533e6eaaa131b252ce950114c2a7efa/pyinstaller_hooks_contrib-2026.6-py3-none-any.whl", hash = "sha256:fd13b8ac126b35361175edacd41a0d97080b75dd5f4b594ecefefff969509dd3", size = 457159, upload-time = "2026-06-08T22:37:14.722Z" },
+]
 
 [[package]]
 name = "pylint"
@@ -120,12 +158,21 @@ wheels = [
 ]
 
 [[package]]
-name = "setuptools"
-version = "59.6.0"
+name = "pywin32-ctypes"
+version = "0.2.3"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/6a/fa/5ec0fa9095c9b72cb1c31a8175c4c6745bf5927d1045d7a70df35d54944f/setuptools-59.6.0.tar.gz", hash = "sha256:22c7348c6d2976a52632c67f7ab0cdf40147db7789f9aed18734643fe9cf3373", size = 2281973, upload-time = "2021-12-12T20:46:30.376Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/85/9f/01a1a99704853cb63f253eea009390c88e7131c67e66a0a02099a8c917cb/pywin32-ctypes-0.2.3.tar.gz", hash = "sha256:d162dc04946d704503b2edc4d55f3dba5c1d539ead017afa00142c38b9885755", size = 29471, upload-time = "2024-08-14T10:15:34.626Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/b0/3a/88b210db68e56854d0bcf4b38e165e03be377e13907746f825790f3df5bf/setuptools-59.6.0-py3-none-any.whl", hash = "sha256:4ce92f1e1f8f01233ee9952c04f6b81d1e02939d6e1b488428154974a4d0783e", size = 952597, upload-time = "2021-12-12T20:46:28.631Z" },
+    { url = "https://files.pythonhosted.org/packages/de/3d/8161f7711c017e01ac9f008dfddd9410dff3674334c233bde66e7ba65bbf/pywin32_ctypes-0.2.3-py3-none-any.whl", hash = "sha256:8a1513379d709975552d202d942d9837758905c8d01eb82b8bcc30918929e7b8", size = 30756, upload-time = "2024-08-14T10:15:33.187Z" },
+]
+
+[[package]]
+name = "setuptools"
+version = "83.0.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/34/26/f5d29e25ffdb535afef2d35cdb55b325298f96debd670da4c325e08d70f4/setuptools-83.0.0.tar.gz", hash = "sha256:025bccbbf0fa05b6192bc64ae1e7b16e001fd6d6d4d5de03c97b1c1ade523bef", size = 1154254, upload-time = "2026-07-04T15:31:22.699Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/5d/40/e1e72872c6354b306daef1703549e8e83b4d43cfea356311bf722a043752/setuptools-83.0.0-py3-none-any.whl", hash = "sha256:29b23c360f22f414dc7336bb39178cc7bcbf6021ed2733cde173f09dba19abb3", size = 1008090, upload-time = "2026-07-04T15:31:20.885Z" },
 ]
 
 [[package]]
@@ -187,10 +234,10 @@ requires-dist = [
     { name = "macholib", specifier = "==1.16.2" },
     { name = "mccabe", specifier = "==0.7.0" },
     { name = "pefile", specifier = "==2023.2.7" },
-    { name = "pyinstaller", specifier = "==3.6" },
+    { name = "pyinstaller", specifier = "==5.13.1" },
     { name = "pylint", specifier = "==2.2.2" },
     { name = "python-osc", specifier = ">=1.9.3" },
-    { name = "setuptools", specifier = "==59.6.0" },
+    { name = "setuptools", specifier = "==83.0.0" },
     { name = "six", specifier = "==1.16.0" },
     { name = "typed-ast", specifier = "==1.5.5" },
     { name = "typing-extensions", specifier = "==4.1.1" },
